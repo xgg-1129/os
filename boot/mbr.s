@@ -41,7 +41,7 @@ SECTION MBR vstart=0x7c00
     mov cx, 4
     call rd_disk_m_16
 
-    jmp LOADER_BASE_ADDR  ;回到loader的起始位置
+    jmp LOADER_BASE_ADDR+0x300  ;回到loader的起始位置
 
 ;-----------------------------------------------------------
 ; 读取磁盘的n个扇区，用于加载loader
